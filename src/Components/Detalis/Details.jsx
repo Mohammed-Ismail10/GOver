@@ -12,7 +12,6 @@ export default function Details() {
 
   async function getDetails(id) {
     let { payload } = await dispatch(getGameDetails(id));
-    console.log(payload);
     setGame(payload);
   }
 
