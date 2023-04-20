@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap");
+
+.font-logo {
+  font-family: "Xanh Mono", monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-login {
+  background-color: #32383e;
+}
+
+.btn-login {
+  background-color: #3a3f44;
+  border-color: #22241d;
+}
+
+.fs-14 {
+  font-size: 0.875rem;
+}
+
+.btn-noneBg:hover {
+  background-color: transparent !important;
+}
+
+.bg-header {
+  background-image: url(../src/img/paladins.b44d33d6e7ee1ba8.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #1c1e22;
+  padding: 4rem 2rem 3.3rem;
+}
+
+.fs-20 {
+  font-size: 1.25rem;
+}
+
+.text-card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+
+.fs-10 {
+  font-size: 0.75rem;
+}
+
+.genre {
+  padding-top: 1px;
+  padding-bottom: 2px;
+  transform: translateY(-12%);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scale {
+  transition: transform 0.2s;
+}
+.scale:hover {
+  transform: scale(1.03, 1.03);
+}
+
+.bg-details {
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+.overlay {
+  background: linear-gradient(rgba(39, 43, 48, 0.9), #272b30);
+  /* height: 100vh; */
+}
+
+.bg-card {
+  background-color: #32383e;
+}
+
+.show-video{
+  transition: opacity .25s;
+}
+.show-video:hover{
+  opacity: 0;
+}
+
+.btn-free:hover{
+  background-color: rgba(50, 56, 62,1);
 }
