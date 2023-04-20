@@ -24,7 +24,7 @@ let loginSlice = createSlice({
   initialState,
   reducers:{
     changePassword:()=>{
-      alert(`ههههه اعمل اكاونت جديد`);
+      alert(`ههههه قم بعمل حساب جديد`);
     }
   },
 

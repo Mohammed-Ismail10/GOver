@@ -35,7 +35,7 @@ export default function Register() {
     email: string().required(`email is required`).email(`email is invalid`),
     phone: string()
       .required(`phone is required`)
-      .matches(/^01[0125][0-9]{8}$/, `phone must be valid number`),
+      .matches(/^[0-9]{10}$/, `phone must be valid number`),
     password: string()
       .required(`password is required`)
       .matches(/^.{8,}$/, `password must be at least 8 charecter`),
