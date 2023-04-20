@@ -14,6 +14,7 @@ import SortBy from './Components/SortBy/SortBy.jsx'
 import Category from './Components/Category/Category.jsx'
 import ProtectRoute from './Components/ProtectRoute/ProtectRoute.jsx'
 import { Offline, Online } from "react-detect-offline";
+import NotFound from './Components/NotFound/NotFound.jsx'
 
 export default function App() {
 
@@ -41,6 +42,7 @@ export default function App() {
       {path:'category/:battle',element:<ProtectRoute><Category/></ProtectRoute>},
       {path:'login',element:<Login/>},
       {path:'register',element:<Register/>},
+      {path:'*',element:<NotFound/>},
     ]}
   ])
 
