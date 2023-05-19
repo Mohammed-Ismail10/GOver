@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getAllGames } from "../Redux/AllSlice.js";
 import Template from "../Template/Template.jsx";
 import { Helmet } from "react-helmet";
 
 export default function All() {
   let dispatch = useDispatch();
+  let { resultSearch } = useSelector(({ allGames }) => allGames);
   const [loading, setLoading] = useState(false);
   const [games, setGames] = useState([]);
   const [num, setNum] = useState(0);
@@ -25,6 +26,10 @@ export default function All() {
   useEffect(() => {
     getGames();
   }, []);
+
+  useEffect(() => {
+    setGames(resultSearch);
+  }, [resultSearch]);
 
   return (
     <>

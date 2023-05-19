@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import { loginContext } from "../../Context/loginContext.js";
+import { useDispatch } from "react-redux";
+import { search } from "../Redux/AllSlice.js";
 
 export default function Navbar() {
   let { userData,logOut } = useContext(loginContext);
-
+  let dispatch = useDispatch();
   return (
     <>
       <nav className="navbar navbar-expand-lg shadow-sm navbar-dark bg-dark fixed-top">
@@ -167,6 +169,10 @@ export default function Navbar() {
 
             <ul className="navbar-nav mt-2 mt-lg-0 justify-content-lg-end w-100 text-center align-items-lg-center">
               {userData ? (
+                <>
+                <li className="nav-item m-2">
+                <input onChange={({target})=>dispatch(search(target.value))} type="search" className="form-control" placeholder="search..." />
+              </li>
                 <li className="nav-item m-2">
                   <Link
                   onClick={logOut}
@@ -176,6 +182,7 @@ export default function Navbar() {
                     Log Out
                   </Link>
                 </li>
+                </>
               ) : (
                 <>
                   <li className="nav-item m-2">
