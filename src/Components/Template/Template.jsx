@@ -8,7 +8,7 @@ export default function Template({ game }) {
         <Link className="text-decoration-none" to={`/details/${game.id}`}>
           <div className="card cursor-pointer scale bg-card shadow rounded-top-0 border-0">
             <div>
-              <img className="w-100 " src={game?.thumbnail} alt={game.title} />
+              <img className="w-100" src={game?.thumbnail} alt={game.title} loading="lazy" />
             </div>
             <div className="card-body p-3">
               <div className="d-flex justify-content-between align-items-center">

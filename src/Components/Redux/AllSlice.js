@@ -33,6 +33,7 @@ let allSlice = createSlice({
       )
     }
   },
+  
 
   extraReducers: (builder) => {
     builder.addCase(getAllGames.fulfilled, (initialState, action) => {
