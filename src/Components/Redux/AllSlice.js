@@ -27,6 +27,7 @@ let allSlice = createSlice({
   name: 'all',
   initialState,
   reducers: {
+    
     search: (initialState, { payload }) => {
       initialState.resultSearch = [];
       initialState.resultSearch = initialState.games.filter((game) => game.title.toLowerCase().includes(payload.toLowerCase())
